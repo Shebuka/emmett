@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0D2B4729391DD500320468 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0D2B4629391DD500320468 /* AppKit.framework */; };
+		0D0D2B562939218D00320468 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0D2B552939218400320468 /* libicucore.tbd */; };
 		8DD76F9A0486AA7600D96B5E /* emmett.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* emmett.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		F405D69B14F45640003FD332 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F405D69A14F45640003FD332 /* CoreServices.framework */; };
@@ -14,7 +16,6 @@
 		F4CCCD7914EDA02500C139A7 /* EMUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CCCD7814EDA02500C139A7 /* EMUtility.m */; };
 		F4CCCE0214EDCAA400C139A7 /* NSDictionary+MutableLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CCCE0114EDCAA400C139A7 /* NSDictionary+MutableLoad.m */; };
 		F4DF94EC14FE164C00C4C694 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DF94EB14FE164C00C4C694 /* RegexKitLite.m */; };
-		F4DF951414FE184700C4C694 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF951314FE184700C4C694 /* libicucore.dylib */; };
 		F4FF83BA14EC7DE6008E3FE6 /* usage.c in Sources */ = {isa = PBXBuildFile; fileRef = F4FF83B914EC7DE6008E3FE6 /* usage.c */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,9 @@
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* emmett.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = emmett.m; sourceTree = "<group>"; };
+		0D0D2B4629391DD500320468 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0D0D2B552939218400320468 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		32A70AAB03705E1F00C91783 /* emmett_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emmett_Prefix.pch; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* emmett */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = emmett; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405D69A14F45640003FD332 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
@@ -42,7 +45,6 @@
 		F4CCCE0114EDCAA400C139A7 /* NSDictionary+MutableLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MutableLoad.m"; sourceTree = "<group>"; };
 		F4DF94EA14FE164800C4C694 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = "RegexKitLite-1.2/RegexKitLite.h"; sourceTree = SOURCE_ROOT; };
 		F4DF94EB14FE164C00C4C694 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = "RegexKitLite-1.2/RegexKitLite.m"; sourceTree = SOURCE_ROOT; };
-		F4DF951314FE184700C4C694 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
 		F4DF95FA14F8637E0017D1F0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		F4FF83B814EC7DE6008E3FE6 /* usage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usage.h; sourceTree = "<group>"; };
 		F4FF83B914EC7DE6008E3FE6 /* usage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = usage.c; sourceTree = "<group>"; };
@@ -53,9 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0D2B4729391DD500320468 /* AppKit.framework in Frameworks */,
+				0D0D2B562939218D00320468 /* libicucore.tbd in Frameworks */,
 				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
 				F405D69B14F45640003FD332 /* CoreServices.framework in Frameworks */,
-				F4DF951414FE184700C4C694 /* libicucore.dylib in Frameworks */,
 				F415871B15058769005FE17D /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
-				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
+				0D0D2B4529391DD400320468 /* Frameworks */,
 			);
 			name = emmett;
 			sourceTree = "<group>";
@@ -88,15 +91,16 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+		0D0D2B4529391DD400320468 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F4DF951314FE184700C4C694 /* libicucore.dylib */,
+				0D0D2B552939218400320468 /* libicucore.tbd */,
+				0D0D2B4629391DD500320468 /* AppKit.framework */,
 				F4DF95FA14F8637E0017D1F0 /* ApplicationServices.framework */,
 				F405D69A14F45640003FD332 /* CoreServices.framework */,
 				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
 			);
-			name = "External Frameworks and Libraries";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
@@ -231,7 +235,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -243,7 +247,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;

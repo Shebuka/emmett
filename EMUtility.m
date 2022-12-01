@@ -15,7 +15,8 @@
 
 #import "NSDictionary+MutableLoad.h"
 
-#include <CoreServices/CoreServices.h>
+#import <CoreServices/CoreServices.h>
+#import <AppKit/AppKit.h>
 
 #include <signal.h>
 
@@ -72,36 +73,41 @@ NSString * const LION_DOCK_VERSION=@"1.8";
 
 + (pid_t) findDockPID
 {
-	struct ProcessSerialNumber tProcessSerialNumber = { 0, 0 };
-	
-	while (GetNextProcess(&tProcessSerialNumber) == noErr)
-	{
-		NSDictionary * tProcessDictionary;
-		
-		tProcessDictionary=(NSDictionary *) ProcessInformationCopyDictionary(&tProcessSerialNumber, kProcessDictionaryIncludeAllInformationMask);
-		
-		if (tProcessDictionary!=nil)
-		{
-			NSString * tProcessBundleIdentifier;
-			
-			tProcessBundleIdentifier=[tProcessDictionary objectForKey:(NSString *) kCFBundleIdentifierKey];
-			
-			[tProcessDictionary release];
-			
-			if ([tProcessBundleIdentifier isEqualToString:APPLE_DOCK_BUNDLE_IDENTIFIER]==YES)
-			{
-				pid_t tDockPID;
-				OSStatus tStatus;
-				
-				tStatus=GetProcessPID(&tProcessSerialNumber,&tDockPID);
-				
-				if (tStatus==noErr)
-				{
-					return tDockPID;
-				}
-			}
-		}
-	}
+//	struct ProcessSerialNumber tProcessSerialNumber = { 0, 0 };
+//
+//	while (GetNextProcess(&tProcessSerialNumber) == noErr)
+//	{
+//		NSDictionary * tProcessDictionary;
+//
+//		tProcessDictionary=(NSDictionary *) ProcessInformationCopyDictionary(&tProcessSerialNumber, kProcessDictionaryIncludeAllInformationMask);
+//
+//		if (tProcessDictionary!=nil)
+//		{
+//			NSString * tProcessBundleIdentifier;
+//
+//			tProcessBundleIdentifier=[tProcessDictionary objectForKey:(NSString *) kCFBundleIdentifierKey];
+//
+//			[tProcessDictionary release];
+//
+//			if ([tProcessBundleIdentifier isEqualToString:APPLE_DOCK_BUNDLE_IDENTIFIER]==YES)
+//			{
+//				pid_t tDockPID;
+//				OSStatus tStatus;
+//
+//				tStatus=GetProcessPID(&tProcessSerialNumber,&tDockPID);
+//
+//				if (tStatus==noErr)
+//				{
+//					return tDockPID;
+//				}
+//			}
+//		}
+//	}
+    
+    NSArray <NSRunningApplication *>*appCount = [NSRunningApplication runningApplicationsWithBundleIdentifier:APPLE_DOCK_BUNDLE_IDENTIFIER];
+    
+    if ( [appCount count] > 0 )
+        return appCount.firstObject.processIdentifier;
 	
 	return 0;
 }
