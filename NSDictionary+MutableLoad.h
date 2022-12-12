@@ -5,3 +5,4 @@
 + (id) mutableDictionaryWithContentsOfFile:(NSString *) inPath;
 
 @end
+

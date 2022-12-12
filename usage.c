@@ -15,60 +15,53 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void usage_add(void)
-{
-	(void)fprintf(stderr, "%s\n","emmett add: add item to the Dock\n"
-				  "Usage: emmet add <path>\n"
-				  "Common options:\n"
-				  "   -no-kill             Do not kill and relaunch the Dock\n"
-				  "   -no-duplicate        Remove existing application items with the same bundle-identifier");
+void usage_add(void) {
+    (void)fprintf(stderr, "%s\n", "emmett add: add item to the Dock\n"
+                  "Usage: emmet add <path>\n"
+                  "Common options:\n"
+                  "   -no-kill             Do not kill and relaunch the Dock\n"
+                  "   -no-duplicate        Remove existing application items with the same bundle-identifier");
 }
 
-void usage_add_missing_object(void)
-{
-	(void)fprintf(stderr, "%s\n","emmett: add: missing <path>\n"
-				  "Usage: emmet add [options] <path>\n"
-				  "       emmet add -help");
+void usage_add_missing_object(void) {
+    (void)fprintf(stderr, "%s\n", "emmett: add: missing <path>\n"
+                  "Usage: emmet add [options] <path>\n"
+                  "       emmet add -help");
 }
 
-void usage_remove(void)
-{
-	(void)fprintf(stderr, "%s\n","emmett remove: remove item(s) from the Dock\n"
-				  "Usage: emmet remove <path|name>\n"
-				  "Common options:\n"
-				  "   -no-kill             Do not kill and relaunch the Dock\n"
-				  "   -bundle-identifier   Look for items with a bundle-identifier identical to name\n"
-				  "   -regex               Evaluate path|name as a regular expression\n");
+void usage_remove(void) {
+    (void)fprintf(stderr, "%s\n", "emmett remove: remove item(s) from the Dock\n"
+                  "Usage: emmet remove <path|name>\n"
+                  "Common options:\n"
+                  "   -no-kill             Do not kill and relaunch the Dock\n"
+                  "   -bundle-identifier   Look for items with a bundle-identifier identical to name\n"
+                  "   -regex               Evaluate path|name as a regular expression\n");
 }
 
-void usage_remove_missing_object(void)
-{
-	(void)fprintf(stderr, "%s\n","emmett: remove: missing <path>\n"
-				  "Usage: emmet remove [options] <path|name>\n"
-				  "       emmet remove -help");
+void usage_remove_missing_object(void) {
+    (void)fprintf(stderr, "%s\n", "emmett: remove: missing <path>\n"
+                  "Usage: emmet remove [options] <path|name>\n"
+                  "       emmet remove -help");
 }
 
-void usage_help(void)
-{
-	(void)fprintf(stderr, "%s\n","help\t\tdisplay more detailed help");
+void usage_help(void) {
+    (void)fprintf(stderr, "%s\n", "help\t\tdisplay more detailed help");
 }
 
-void usage_verb(const char * inError)
-{
-	(void)fprintf(stderr, "emmet: %s\n%s",inError,
-				                 "Usage: emmett <verb> <options>\n"
-								 "<verb> is one of the following:\n"
-								 "help\nadd\nremove\n");
+void usage_verb(const char * inError) {
+    (void)fprintf(stderr, "emmet: %s\n%s", inError,
+                  "Usage: emmett <verb> <options>\n"
+                  "<verb> is one of the following:\n"
+                  "help\nadd\nremove\n");
 }
 
-void usage(void)
-{
-	(void)fprintf(stderr, "%s\n","Usage: emmett <verb> <options>\n"
-				  "<verb> is one of the following:\n"
-				  "help\nadd\nremove\n\n"
-				  "Usage: emmet add [options] <path>\n"
-				  "       emmet add -help\n\n"
-				  "Usage: emmet remove [options] <path|name>\n"
-				  "       emmet remove -help\n");
+void usage(void) {
+    (void)fprintf(stderr, "%s\n", "Usage: emmett <verb> <options>\n"
+                  "<verb> is one of the following:\n"
+                  "help\nadd\nremove\n\n"
+                  "Usage: emmet add [options] <path>\n"
+                  "       emmet add -help\n\n"
+                  "Usage: emmet remove [options] <path|name>\n"
+                  "       emmet remove -help\n");
 }
 
