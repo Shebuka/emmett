@@ -171,7 +171,7 @@ NSString *const LION_DOCK_VERSION = @"1.8";
         
         tNewDockPID = [EMUtility findDockPID];
         
-        if (tNewDockPID == 0) {
+        if (tNewDockPID <= 0) {
             tAttemptsCount += 1;
             
             nanosleep(&tTimeSpec, NULL);
