@@ -13,22 +13,19 @@
 
 #import <Foundation/Foundation.h>
 
-enum
-{
+enum {
     kRemoveDuplicates=1,
     kBundleIdentifier=2,
     kRegularExpression=4
 };
 
-enum
-{
+enum {
     kPathComparison,
     kNameComparison,
     kBundleIdentifierComparison
 };
 
-@interface EMUtility : NSObject
-{
+@interface EMUtility : NSObject {
 
 }
 
@@ -38,7 +35,7 @@ enum
 
 + (BOOL) resumeAndKillDockProcess;
 
-/*+ (NSNumber *) computeGUIDWithDictionary:(NSDictionary *) inDictionary;*/
++ (NSNumber *) computeGUIDWithDictionary:(NSDictionary *) inDictionary;
 
 + (BOOL) addTileToSection:(NSString *) inSection withItemAtPath:(NSString *) inPath options:(NSUInteger) inOptions;
 
